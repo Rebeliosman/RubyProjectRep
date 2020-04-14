@@ -1,9 +1,9 @@
-uestions = [
+questions = [
 "If your partner casts a glance at an unknown woman, do you make him a scandal right on the street?",
-"If your partner is late for dinner, are you sure he was on the other?"
+"If your partner is late for dinner, are you sure he was on the other?",
 "Are you asking him about work, about colleagues?",
 "Do you think that every free minute should be spent together?",
-"Is it light for you through the window?"
+"Is it light for you through the window?",
 "Do you ever check his correspondence and rummage through his things?",
 "The more he talks about his feelings, the less you believe?",
 "Do you want him to be interested only in what you are interested in?",
