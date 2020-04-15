@@ -2,7 +2,21 @@ def sklonenie (number, sl1, sl2, sl3)
   if (number == nil || !number.is_a?(Numeric))
     number = 0
   end
+
+if (number>=11 && number <14)
+  return sl3
+end
+
+if number%100>=11 && number%100<=14
+return sl3
+end
+
+if (number == 14)
+  return sl3
+end
+
 ost = number%10
+
 if (ost == 1)
   return sl1
 end
