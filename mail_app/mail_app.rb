@@ -9,11 +9,14 @@ password = STDIN.gets.chomp
 puts "Reciever e-mail:"
 send_to = 'rebeliosman@gmail.com'
 
+puts "Enter subject"
+sub = STDIN.gets.chomp
+
 puts "E-mail text:"
 body = "Test massenge from my mail app ruby."
 
 Pony.mail({
-  :subject => "Ruby test!",
+  :subject => sub,
   :body => body,
   :to => send_to,
   :from => my_mail,
