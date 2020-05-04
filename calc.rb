@@ -15,10 +15,10 @@ puts "Answer is:"
       puts first_arg * second_arg
     elsif math_action == "/"
 
-    begin
-      puts first_arg / second_arg
-    rescue ZeroDivisionError
-    puts "Divided by zero"
+    #begin
+    #  puts first_arg / second_arg
+  #  rescue ZeroDivisionError
+  #  puts "Divided by zero"
     end
 
     else
