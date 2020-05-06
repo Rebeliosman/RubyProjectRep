@@ -8,10 +8,7 @@ class Game
     end
 
     def get_letters(slovo)
-      if (slovo == nil || slovo == "")
-        abort "Для игры введите загаданное слово в качестве аргумента при запуске программы"
-      end
-      return slovo.split("")
+        return slovo.split("")
     end
 
     def ask_next_letter
