@@ -1,17 +1,23 @@
 def show_rolling_die
   100.times do
-    # Вместо puts используем print, т.к. он не добавляет перенос строки в конце
+
     print "#{rand(6) + 1}\r"
-    sleep 0.05
+    sleep 0.01
   end
 end
 
 puts 'How many dice?'
 number = gets.to_i
-puts
+puts "-----"
+
+summ_dice = 0
 
 number.times do
-  # Вызываем метод вращения кубика
+
   show_rolling_die
-  puts rand(6) + 1
+  dice = rand(6) + 1
+  summ_dice = dice + summ_dice
+  puts dice
 end
+
+puts "Summ of dices is #{summ_dice}"
