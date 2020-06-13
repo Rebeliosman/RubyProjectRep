@@ -10,6 +10,7 @@ class Item
     @amount = params[:amount]
   end
 
+
   def to_s
     "#{@price} USD. (Amount avalable #{@amount})"
   end
@@ -18,4 +19,6 @@ class Item
     @amount = params[:amount]
     @price = params[:price]
   end
+
+  
 end

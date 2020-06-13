@@ -41,3 +41,11 @@ items << Book.new(
 puts 'Item list:'
 puts
 items.each { |item| puts item }
+
+#для проверки метода update
+
+film = Movie.new(title: 'Grand Hotel Budapesht', director: 'Lars f Trier', price: 14, year: '2018', price: 9, amount: 10)
+film.update(amount: 5)
+
+puts film.to_s
+puts film.amount
