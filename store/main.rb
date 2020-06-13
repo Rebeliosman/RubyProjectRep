@@ -11,7 +11,33 @@ require_relative 'item.rb'
 require_relative 'movie.rb'
 require_relative 'book.rb'
 
-leon = Movie.new(price: 999, amount: 5, name: 'Leon')
 
-puts "#{leon.name} movie price #{leon.price} USD"
-puts "Avalable amount - #{leon.amount} pieces"
+items = []
+
+items << Movie.new(
+  title: 'Leon',
+  year: '1994',
+  director: 'L. Besson',
+  price: 9,
+  amount: 10
+)
+
+items << Book.new(
+  title: 'Idiot',
+  genre: 'novel',
+  author: 'F. Dostoevsky',
+  price: 2,
+  amount: 10
+)
+
+items << Book.new(
+  title: 'Moman',
+  genre: 'novel',
+  author: 'F. Postoevsky',
+  price: 5,
+  amount: 5
+)
+
+puts 'Item list:'
+puts
+items.each { |item| puts item }
