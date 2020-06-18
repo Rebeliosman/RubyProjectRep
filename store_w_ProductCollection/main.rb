@@ -15,7 +15,7 @@ require_relative 'lib/productcollection'
 collection = ProductCollection.from_dir(File.dirname(__FILE__) + '/data')
 
 
-collection.sort!(by: :title, order: :asc)
+collection.sort!(by: :price, order: :asc)
 
 collection.to_a.each do |product|
   puts product
