@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<expenses>
+  <expense date="18.06.2020" category="Магазины" amount="900" >
+      Продукты
+  </expense>
+
+<expense date="18.05.2020" category="Магазины" amount="1200" >
+      Продукты
+  </expense>
+
+  <expense date="12.06.2020" category="Техника" amount="200" >
+      Переходник Svideo - RCA
+  </expense>
+
+</expenses>
