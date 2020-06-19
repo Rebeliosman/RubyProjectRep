@@ -11,7 +11,7 @@ require 'rexml/document'# Подключаем парсер rexml
 
 file_name = File.dirname(__FILE__) + '/b_card.xml'
 unless File.exist?(file_name)
-  abort "File #{file_name} not found." # Не найден файл, завершаем программу.
+  abort "File #{file_name} not found." # Не найден файл, завершение программы
 end
 
 file = File.new(file_name)
