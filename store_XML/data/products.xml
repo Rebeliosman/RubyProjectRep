@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products>
+
+  <product price = '5', amount ='12'>
+    <book title = 'IT', author ='Stephen King'>
+  </product>
+
+  <product price = '2', amount ='4'>
+    <movie title = 'The Grand Budapest Hotel', director ='Wesley Wales Anderson', year = '2014'>
+  </product>
+
+</products>
