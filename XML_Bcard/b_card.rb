@@ -17,3 +17,18 @@ end
 file = File.new(file_name)
 card = REXML::Document.new(file)
 file.close
+
+b_card = {} #создал массив для записи в него полей XML файла
+
+['name','prof', 'phone', 'email', 'description'].each do |field|
+  b_card[field] = card.root.elements[field].text
+end
+
+# вывод информации
+
+puts "#{b_card['name']}"
+puts "*********************"
+puts "#{b_card['prof']}"
+puts "#{b_card['phone']}, #{b_card['email']}"
+puts "*********************"
+puts "#{b_card['description']}"

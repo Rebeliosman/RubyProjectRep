@@ -2,8 +2,10 @@
 
 <person>
 
-  <person name="Ivan Surkov" prof="Engineer" email="rebeliosman@gmail.com" phone = "+79629723088">
-      Ruby Junior Developer
-  </person>
+  <name> Ivan Surkov </name>
+  <prof> Engineer </prof>
+  <email> rebeliosman@gmail.com </email>
+  <phone> +79629723088 </phone>
+  <description> Ruby Junior Developer </description>
 
 </person>
