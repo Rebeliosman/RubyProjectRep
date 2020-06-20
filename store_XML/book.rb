@@ -6,6 +6,6 @@ def update(options)
 end
 
 def info
-    "Book #{@title}, Author: #{@author}"
+   "Book: #{@title}, Author: #{@author}"
 end
 end

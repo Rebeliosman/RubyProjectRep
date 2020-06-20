@@ -1,4 +1,4 @@
-class Disk < Item
+class Disc < Item
 
   def update(options)
     @title = options[:title]
@@ -8,7 +8,7 @@ class Disk < Item
   end
 
   def info
-      "Disk #{@title}, Band: #{@band}, Genre #{@genre}, Year: #{@year}"
+      "Disk: #{@title}, Band: #{@band}, Genre: #{@genre}, Year: #{@year}"
   end
 
 end

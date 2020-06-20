@@ -1,8 +1,8 @@
 class Item
 
-def initialize(params)
-    @price = params[:price]
-    @amount = params[:amount]
+def initialize(price, amount)
+    @price = price
+    @amount = amount
 end
 
 def price
@@ -19,15 +19,34 @@ def show
   "#{info} - #{@price} USD. [Amout avalable: #{@amount}]"
 end
 
-def self.showcase(items)
-  items.each_with_index do |item, index|
-    puts "#{index}: #{items.show}"
+def self.showcase(products)
+
+  puts "What to buy something? \n\n"
+
+  products.each_with_index do |item, index|
+    puts "#{index}: #{item.show}"
+  end
+
+  puts "x - to exit the store"
+end
+
+def buy
+  if @amount > 0
+    puts "*****"
+    puts "You buy #{@info}"
+    puts "*****\n\n"
+
+    @amount -=1
+    price
+  else
+    puts "sorry, sold out"
+    0
   end
 end
 
 def self.read_from_XML(file_name)
 
-  file_path = File.dirname(__FILE__) + '/' + file_name
+  file_path = File.dirname(__FILE__) + '/data' + file_name
   unless File.exist?(file_path)
     abort "File #{file_path} not found." # Не найден файл, завершение программы
   end
@@ -36,19 +55,19 @@ def self.read_from_XML(file_name)
   doc = REXML::Document.new(file)
   file.close
 
-  # цикл по всем элементам в каждом тэге <product>
+    # цикл по всем элементам в каждом тэге <product>
 
-  result =[]
+  result = []
   item = nil
 
-doc.elements.each ('product/product') do |product_node|
+    doc.elements.each ("products/product") do |product_node|
 
     price = product_node.attributes["price"].to_i
     amount = product_node.attributes["amount"].to_i
 
-# в тэге Book
+    # в тэге Book
 
-    product_node.elements.each ('book') do |book_node|
+    product_node.each_element("book") do |book_node|
 
     item = Book.new(price, amount)
     item.update(
@@ -59,31 +78,33 @@ doc.elements.each ('product/product') do |product_node|
 
 # в тэге Movie
 
-    product_node.elements.each ('movie') do |movie_node|
+    product_node.each_element("movie") do |movie_node|
 
     item = Movie.new(price, amount)
     item.update(
-      title: movie_node.attributes['title'],
-      director: movie_node.attributes['director'],
-      year: movie_node.attributes['year']
+      title: movie_node.attributes["title"],
+      director: movie_node.attributes["director"],
+      year: movie_node.attributes["year"]
     )
     end
 
 # в тэге Disk
 
-    product_node.elements.each ('disk') do |disk_node|
-    item = Disk.new(price, amount)
+    product_node.each_element('disc') do |disc_node|
+    item = Disc.new(price, amount)
     item.update(
-      title: disk_node.attributes['title'],
-      band: disk_node.attributes['band'],
-      genre: disk_node.attributes['genre'],
-      year: disk_node.attributes['year']
+      title: disc_node.attributes['title'],
+      band: disc_node.attributes['band'],
+      genre: disc_node.attributes['genre'],
+      year: disc_node.attributes['year']
     )
     end
 
   result.push(item)
+
 end
 
 return result
+
 end
 end

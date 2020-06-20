@@ -7,7 +7,7 @@ class Movie < Item
   end
 
   def info
-      "Movie #{@title}, Director: #{@director}, Year: #{@year}"
+      "Movie: #{@title}, Director: #{@director}, Year: #{@year}"
   end
 
 end

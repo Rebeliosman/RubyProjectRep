@@ -10,21 +10,23 @@ end
 require 'rexml/document'# Подключаем парсер rexml
 require_relative 'item'
 require_relative 'book'
-require_relative 'disk'
+require_relative 'disc'
 require_relative 'movie'
 
 total_price = 0
 
-list = Item.read_from_XML('/data/products.xml')
+products = Item.read_from_XML('/products.xml')
+
 
 choice = nil
 while choice != 'x'
-Item.showcase(list)
-choice = STDIN.gets.chomp
-if choice != 'x' && choice.to_i < list.size && choice.to_i >= 0
-    item = list[choice.to_i]
-    total_price += item.buy
-  end
+  Item.showcase(products)
+  choice = STDIN.gets.chomp
+
+    if choice != 'x' && choice.to_i < products.size && choice.to_i >= 0
+      product = products[choice.to_i]
+      total_price += product.buy
+    end
 end
 
-puts "Спасибо за покупки, с Вас #{total_price} руб."
+puts "Thanks for shopping, #{total_price} USD to pay."
