@@ -88,7 +88,7 @@ def self.read_from_XML(file_name)
     )
     end
 
-# в тэге Disk
+# в тэге Disc
 
     product_node.each_element('disc') do |disc_node|
     item = Disc.new(price, amount)
