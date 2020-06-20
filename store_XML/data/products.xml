@@ -5,12 +5,32 @@
     <book title="IT" author="Stephen King"></book>
   </product>
 
+  <product price="5" amount="1">
+    <book title="Idiot" author="Fedor Dostoevsky"></book>
+  </product>
+
+  <product price="5" amount="4">
+    <book title="Children of Corn" author="Stephen King"></book>
+  </product>
+
   <product price="2" amount="4">
     <movie title ="The Grand Budapest Hotel" director="Wesley Wales Anderson" year="2014"></movie>
   </product>
 
-  <product price = '5' amount ='205'>
-    <disc title = 'The Black Album' band ='Metallica' genre ='Metal' year = '2014'></disc>
+  <product price = '5' amount ='25'>
+    <disc title = 'The Black Album' band ='Metallica' genre ='Metal' year = '1991'></disc>
+  </product>
+
+  <product price = '7' amount ='54'>
+    <disc title = 'Peoples=Shit' band ='Slipknot' genre ='Nu-Metal' year = '2001'></disc>
+  </product>
+
+  <product price = '5' amount ='6'>
+    <disc title = 'Untouchables' band ='KOЯN' genre ='Nu-Metal' year = '2002'></disc>
+  </product>
+
+  <product price = '12' amount ='28'>
+    <disc title = 'Between the Devil and the Deep Blue Sea' band ='Black Stone Cherry' genre ='Southern rock' year = '2011'></disc>
   </product>
 
 </products>

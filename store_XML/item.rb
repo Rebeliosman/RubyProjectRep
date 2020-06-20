@@ -39,7 +39,7 @@ def buy
     @amount -=1
     price
   else
-    puts "sorry, sold out"
+    puts "Sorry, Item you choose is sold out."
     0
   end
 end
