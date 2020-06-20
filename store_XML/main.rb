@@ -8,9 +8,23 @@ if Gem.win_platform?
 end
 
 require 'rexml/document'# Подключаем парсер rexml
-require_relative '/data/item'
-require_relative '/data/book'
-require_relative '/data/disc'
-require_relative '/data/movie'
+require_relative 'item'
+require_relative 'book'
+require_relative 'disk'
+require_relative 'movie'
 
-products = Item.read_from_XML('data/products.xml')
+total_price = 0
+
+list = Item.read_from_XML('/data/products.xml')
+
+choice = nil
+while choice != 'x'
+Item.showcase(list)
+choice = STDIN.gets.chomp
+if choice != 'x' && choice.to_i < list.size && choice.to_i >= 0
+    item = list[choice.to_i]
+    total_price += item.buy
+  end
+end
+
+puts "Спасибо за покупки, с Вас #{total_price} руб."

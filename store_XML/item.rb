@@ -19,20 +19,20 @@ def show
   "#{info} - #{@price} USD. [Amout avalable: #{@amount}]"
 end
 
-def self.showcase(products)
-  item.each_with_index do |item, index|
-    puts "#{index}: #{item.show}"
+def self.showcase(items)
+  items.each_with_index do |item, index|
+    puts "#{index}: #{items.show}"
   end
 end
 
 def self.read_from_XML(file_name)
 
-  file_path = File.dirname(__FILE__) + '/' + file_name'
+  file_path = File.dirname(__FILE__) + '/' + file_name
   unless File.exist?(file_path)
     abort "File #{file_path} not found." # Не найден файл, завершение программы
   end
 
-  file = File.new(file_file_path)
+  file = File.new(file_path)
   doc = REXML::Document.new(file)
   file.close
 
@@ -43,17 +43,17 @@ def self.read_from_XML(file_name)
 
 doc.elements.each ('product/product') do |product_node|
 
-    price = product_node.attributes['price'].to_i
-    amount = product_node.attributes.['amount'].to_i
+    price = product_node.attributes["price"].to_i
+    amount = product_node.attributes["amount"].to_i
 
 # в тэге Book
 
     product_node.elements.each ('book') do |book_node|
 
     item = Book.new(price, amount)
-    item.update (
-      title: book_node.attributes['title']
-      author: book_node.attributes['author']
+    item.update(
+      title: book_node.attributes["title"],
+      author: book_node.attributes["author"]
     )
     end
 
@@ -62,9 +62,9 @@ doc.elements.each ('product/product') do |product_node|
     product_node.elements.each ('movie') do |movie_node|
 
     item = Movie.new(price, amount)
-    item.update (
-      title: movie_node.attributes['title']
-      director: movie_node.attributes['director']
+    item.update(
+      title: movie_node.attributes['title'],
+      director: movie_node.attributes['director'],
       year: movie_node.attributes['year']
     )
     end
@@ -73,10 +73,10 @@ doc.elements.each ('product/product') do |product_node|
 
     product_node.elements.each ('disk') do |disk_node|
     item = Disk.new(price, amount)
-    item.update (
-      title: disk_node.attributes['title']
-      band: disk_node.attributes['band']
-      genre: disk_node.attributes['genre']
+    item.update(
+      title: disk_node.attributes['title'],
+      band: disk_node.attributes['band'],
+      genre: disk_node.attributes['genre'],
       year: disk_node.attributes['year']
     )
     end
