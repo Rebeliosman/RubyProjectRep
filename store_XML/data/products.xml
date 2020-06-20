@@ -9,4 +9,8 @@
     <movie title = 'The Grand Budapest Hotel', director ='Wesley Wales Anderson', year = '2014'>
   </product>
 
+  <product price = '5', amount ='205'>
+    <disc title = 'The Black Album', band ='Metallica', genre ='Metal', year = '2014'>
+  </product>
+
 </products>
