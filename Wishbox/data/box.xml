@@ -1,6 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <wishes>
-  <wish date='2020.07.01'>
+  <wish date='2020.04.01'>
     Gold
+  </wish>
+  <wish date='2020.07.01'>
+    Silver
+  </wish>
+  <wish date='2020.04.05'>
+    Platinum
+  </wish>
+  <wish date='2020.07.01'>
+    Coal
   </wish>
 </wishes>
