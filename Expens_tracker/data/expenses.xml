@@ -1,16 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
-
+<?xml version='1.0' encoding='UTF-8'?> 
 <expenses>
-  <expense date="11.6.2020" category="Магазины" amount="900" >
-      Продукты
+  <expense date='11.6.2020' category='Market' amount='9'>
+     Food 
   </expense>
-
-<expense date="18.8.2020" category="Магазины" amount="1200" >
-      Продукты
+  <expense date='18.8.2020' category='Market' amount='12'>
+     Food 
   </expense>
-
-  <expense date="22.8.2020" category="Техника" amount="200" >
-      Переходник Svideo - RCA
+  <expense date='22.8.2020' category='Tech' amount='2'>
+     Cable Svideo - RCA 
   </expense>
-
+  <expense date='2020.07.01' category='Books' amount='2'>
+     Stephen King IT 
+  </expense>
+  <expense date='2020.07.01' category='123' amount='2500'>
+     Zhopa 
+  </expense>
+  <expense date='2019.05.11' category='COLA' amount='5'>
+    COCACOLA
+  </expense>
 </expenses>
