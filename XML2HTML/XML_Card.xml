@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<person>
+
+  <name> Ivan Surkov </name>
+  <prof> Engineer </prof>
+  <email> rebeliosman@gmail.com </email>
+  <phone> +79629723088 </phone>
+  <description> Ruby Junior Developer </description>
+
+</person>
